@@ -12,15 +12,11 @@ namespace Ticaje\Contract\Application\Service;
 /**
  * Interface ServiceLocatorInterface
  * @package Ticaje\Base\Application\Service
+ * I'm gonna assume not a singleton pattern, if you wanna implement a singleton pattern then use a third library, framework
+ * or implement it by your self.
  */
 interface ServiceLocatorInterface
 {
-    /**
-     * @param $class
-     * @return mixed
-     */
-    public function get($class);
-
     /**
      * @param $class
      * @param array $arguments

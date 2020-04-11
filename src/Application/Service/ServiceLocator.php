@@ -22,24 +22,16 @@ class ServiceLocator implements ServiceLocatorInterface
 
     /**
      * @param $class
-     * @return mixed
-     */
-    public function get($class)
-    {
-        return $this->instances[$class];
-    }
-
-    /**
-     * @param $class
      * @param array $arguments
      * @return mixed
      * Low level instantiation to keep me save from tightly coupling
      */
     public function create($class, array $arguments = [])
     {
-        if (!isset($this->instances[$class])) {
-            $this->instances[$class] = new $class($arguments);
+        $classHash = hash('md5', $class . implode("", array_values($arguments)));
+        if (!isset($this->instances[$classHash])) {
+            $this->instances[$classHash] = new $class($arguments);
         }
-        return $this->instances[$class];
+        return $this->instances[$classHash];
     }
 }
