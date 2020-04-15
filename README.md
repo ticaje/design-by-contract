@@ -2,7 +2,7 @@
 ## This library is sort of standard to start working with DbC patterns
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/ticaje/design-by-contract.svg?style=flat-square)](https://packagist.org/packages/ticaje/design-by-contract)
-[![Quality Score](https://img.shields.io/scrutinizer/g/design-by-contract.svg?style=flat-square)](https://scrutinizer-ci.com/g/design-by-contract)
+[![Quality Score](https://img.shields.io/scrutinizer/g/ticaje/design-by-contract.svg?style=flat-square)](https://scrutinizer-ci.com/g/ticaje/design-by-contract)
 [![Total Downloads](https://img.shields.io/packagist/dt/ticaje/design-by-contract.svg?style=flat-square)](https://packagist.org/packages/ticaje/design-by-contract)
 
 ## Preface
