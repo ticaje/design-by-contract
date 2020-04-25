@@ -9,7 +9,7 @@ declare(strict_types=1);
 
 namespace Ticaje\Contract\Patterns\Implementation\Decorator\Responder;
 
-use Ticaje\Contract\Traits\Getter as GetterTrait;
+use Ticaje\Contract\Traits\BaseDto;
 use Ticaje\Contract\Patterns\Interfaces\Decorator\Responder\ResponseInterface;
 
 /**
@@ -18,38 +18,11 @@ use Ticaje\Contract\Patterns\Interfaces\Decorator\Responder\ResponseInterface;
  */
 class Response implements ResponseInterface
 {
-    use GetterTrait;
+    use BaseDto;
 
     protected $success;
 
     protected $content;
 
     protected $message;
-
-    /**
-     * @inheritDoc
-     */
-    public function setSuccess(bool $success): ResponseInterface
-    {
-        $this->success = $success;
-        return $this;
-    }
-
-    /**
-     * @inheritDoc
-     */
-    public function setContent($content): ResponseInterface
-    {
-        $this->content = $content;
-        return $this;
-    }
-
-    /**
-     * @inheritDoc
-     */
-    public function setMessage(string $message): ResponseInterface
-    {
-        $this->message = $message;
-        return $this;
-    }
 }

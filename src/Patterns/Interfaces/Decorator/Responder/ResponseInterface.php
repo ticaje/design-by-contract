@@ -17,21 +17,4 @@ use Ticaje\Contract\Patterns\Interfaces\Decorator\DecoratorInterface;
  */
 interface ResponseInterface extends DecoratorInterface
 {
-    /**
-     * @param bool $success
-     * @return ResponseInterface
-     */
-    public function setSuccess(bool $success): self;
-
-    /**
-     * @param $content
-     * @return ResponseInterface
-     */
-    public function setContent($content): self;
-
-    /**
-     * @param string $message
-     * @return ResponseInterface
-     */
-    public function setMessage(string $message): self;
 }
