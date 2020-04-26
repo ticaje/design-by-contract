@@ -15,6 +15,7 @@ use Ticaje\Contract\Patterns\Interfaces\Decorator\ResponderInterface;
 /**
  * Class Responder
  * @package Ticaje\Contract\Patterns\Implementation\Decorator
+ * @todo Document overview of this module
  */
 class Responder implements ResponderInterface
 {
