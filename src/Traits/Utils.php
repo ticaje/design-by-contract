@@ -36,4 +36,13 @@ trait Utils
             )
         );
     }
+
+    /**
+     * @param $string
+     * @return string
+     */
+    public function unCamelize($string)
+    {
+        return strtolower(preg_replace('/(?<!^)[A-Z]/', '_$0', $string));
+    }
 }
