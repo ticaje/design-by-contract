@@ -13,8 +13,7 @@ namespace Ticaje\Contract\Application\Service;
  * Class ServiceLocator
  * @package Ticaje\Base\Application\Service
  * This class kind of performs gateway pattern design in order to provide consistency to our Model Domain
- * According to DI principle it complies to separate the Model Domain from the current framework.
- * We're gonna play Magento rules since this is a Gateway, so our Domain does not get touched by Magento's
+ * According to DI principle it complies to separate the Model Domain from any framework or higher level platform.
  */
 class ServiceLocator implements ServiceLocatorInterface
 {

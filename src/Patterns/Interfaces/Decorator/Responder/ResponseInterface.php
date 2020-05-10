@@ -17,4 +17,5 @@ use Ticaje\Contract\Patterns\Interfaces\Decorator\DecoratorInterface;
  */
 interface ResponseInterface extends DecoratorInterface
 {
+    /** This is the super module that governs all responses from specific Domain */
 }
