@@ -37,7 +37,7 @@ trait Singleton
      */
     protected function singletonKeyed($binder, callable $logic, $index = 0)
     {
-        if (!$this->{$binder}[$index]) {
+        if (!isset($this->{$binder}[$index])) {
             $this->{$binder}[$index] = $logic();
         }
         return $this->{$binder}[$index];
