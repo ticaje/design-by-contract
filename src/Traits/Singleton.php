@@ -28,4 +28,18 @@ trait Singleton
         }
         return $this->{$binder};
     }
+
+    /**
+     * @param $binder
+     * @param callable $logic
+     * @param int $index
+     * @return mixed
+     */
+    protected function singletonKeyed($binder, callable $logic, $index = 0)
+    {
+        if (!$this->{$binder}[$index]) {
+            $this->{$binder}[$index] = $logic();
+        }
+        return $this->{$binder}[$index];
+    }
 }
