@@ -15,7 +15,7 @@
     "require": {
         "php": "^7.1"
     },
-    "version": "1.0.7",
+    "version": "1.0.8",
     "autoload": {
         "psr-4": {
             "Ticaje\\Contract\\": "src/"
