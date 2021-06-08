@@ -41,4 +41,12 @@ abstract class Base implements FactoryInterface
     {
         return $this->serviceLocator->create($this->instanceName, $data);
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function get($class)
+    {
+        return $this->serviceLocator->create($class);
+    }
 }

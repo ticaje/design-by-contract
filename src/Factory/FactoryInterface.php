@@ -20,4 +20,11 @@ interface FactoryInterface
      * @return mixed
      */
     public function create(array $data = []);
+
+    /**
+     * @param $class
+     *
+     * @return mixed
+     */
+    public function get($class);
 }
