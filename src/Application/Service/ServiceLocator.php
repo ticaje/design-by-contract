@@ -1,6 +1,5 @@
 <?php
 declare(strict_types=1);
-
 /**
  * Service Locator Class
  * @category    Ticaje
@@ -20,8 +19,9 @@ class ServiceLocator implements ServiceLocatorInterface
     protected $instances = [];
 
     /**
-     * @param $class
+     * @param       $class
      * @param array $arguments
+     *
      * @return mixed
      * Low level instantiation to keep me save from tightly coupling
      */
@@ -31,6 +31,15 @@ class ServiceLocator implements ServiceLocatorInterface
         if (!isset($this->instances[$classHash])) {
             $this->instances[$classHash] = new $class($arguments);
         }
+
         return $this->instances[$classHash];
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function get($class)
+    {
+        return $this->create($class);
     }
 }
