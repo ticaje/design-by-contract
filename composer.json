@@ -13,9 +13,9 @@
     "description": "DbC compliant Library",
     "type": "library",
     "require": {
-        "php": "^7.1"
+        "php": "^7.0"
     },
-    "version": "1.1.1",
+    "version": "1.1.2",
     "autoload": {
         "psr-4": {
             "Ticaje\\Contract\\": "src/"
