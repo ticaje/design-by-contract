@@ -91,6 +91,6 @@ trait BaseDto
      */
     private function get($property)
     {
-        return $this->{$property};
+        return $this->{$property} ?? null;
     }
 }
